@@ -57,7 +57,7 @@ nav .container{
 }
 
 .profile-img{
-    width: 2.7rem;
+    width: 2.6rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
@@ -69,6 +69,7 @@ nav .container{
     justify-content: space-between;
 }
 
+
 .btn{
     background-color: var(--color-primary);
     color: white;
@@ -76,6 +77,19 @@ nav .container{
     padding: var(--btn-padding);
     border-radius: var(--border-radius);
     cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn2{
+    background-color: var(--color-gray);
+    color: white;
+    font-weight: 800;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 .search-content{
@@ -84,7 +98,7 @@ nav .container{
     padding: var(--search-padding);
 }
 
-.search-content input{
+.search-content input , .inp{
     background-color: transparent;
     outline: none;
     border: none;
@@ -102,7 +116,6 @@ nav .container{
 
 
 /*============= LEFT =============*/
-
 small{
     display: block;
     margin-top: .3rem;
@@ -116,10 +129,11 @@ main{
 main .main-container{
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 18vw auto 20vw;
+    grid-template-columns: auto auto auto;
     column-gap: 2rem;
     position: relative;
 }
+
 
 main .main-container .left-container .profile{
     display: flex;
@@ -231,4 +245,266 @@ main .main-container .left-container .profile{
     align-items: start;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+/*================= MIDDLE =================*/
+.middle-container .stories{
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+    gap: .5rem;
+}
+
+.middle-container .stories .story{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    color: white;
+    font-size: .75rem;
+    width: 100%;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.middle-container .stories .story:nth-child(1){
+    background: url("images/story1.jpg")
+    no-repeat center center/cover;
+}
+
+.middle-container .stories .story:nth-child(2){
+    background: url("images/story2.jpg")
+    no-repeat center center/cover;
+}
+
+.middle-container .stories .story:nth-child(3){
+    background: url("images/story3.webp")
+    no-repeat center center/cover;
+}
+
+.middle-container .stories .story:nth-child(4){
+    background: url("images/story4.jpg")
+    no-repeat center center/cover;
+}
+
+.middle-container .stories .story:nth-child(5){
+    background: url("images/story5.webp")
+    no-repeat center center/cover;
+}
+
+.middle-container .stories .story:nth-child(6){
+    background: url("images/story6.jpg")
+    no-repeat center center/cover;
+}
+
+.middle-container .story .profile-img{
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 3px solid var(--color-primary);
+}
+
+/*////// CREATE POST ///////*/
+.middle-container .create-post{
+    background-color: red;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: .4rem var(--card-padding);
+    border-radius: var(--border-radius);
+}
+
+/*==================== FEEDS ====================*/
+.middle-container .feeds .feed{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: .85rem;
+    line-height: 1.5;
+}
+
+.middle-container .feeds .feed .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle-container .feeds .feed .user{
+    display: flex;
+    gap: 1rem;
+}
+
+.middle-container .feeds .feed .feed-pic{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: .7rem 0;
+}
+
+.middle-container .feeds .feed .action-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: .6rem;
+}
+
+.middle-container .feeds .feed .interaction-btns i{
+    margin-left: .4rem;
+}
+
+.liked-by{
+    display: flex;
+}
+
+.middle-container .liked-by span img{
+    width: 1.4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+}
+
+.middle-container .liked-by span .ml{
+    margin-left: -0.6rem;
+}
+
+.middle-container .liked-by p{
+    margin-left: .5rem;
+}
+
+
+/*===================== RIGHT ========================*/
+.right-container{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+}
+
+.right-container .messages{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.right-container .messages .headling{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right-container .messages i{
+    font-size: 1.4rem;
+}
+
+.right-container .messages .search-bar{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.right-container .messages .search-bar input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.right-container .messages .search-bar{
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+.right-container .category{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right-container .category h6{
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid var(--color-light);
+    padding-bottom: .5rem;
+    font-size: .80rem;
+}
+
+.right-container .category .active{
+    border-color: var(--color-dark);
+}
+
+.right-container .messages .message{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: start;
+}
+
+.right-container .messages .message:last-child{
+    margin: 0;
+}
+
+.right-container .messages .message p{
+    font-size: .8rem;
+}
+
+.right-container .message .profile-photo{
+    position: relative;
+    overflow: visible;
+}
+
+.right-container .message .profile-photo img{
+    border-radius: 50%;
+}
+
+.right-container .message .profile-photo .active{
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+    background-color: var(--color-success);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/*======================= FRIEND REQUESTS ======================*/
+.right-container .friend-requests{
+    margin-top: 1rem;
+}
+
+.right-container .friend-requests h4{
+    color: var(--color-gray);
+    margin: 1rem 0;
+}
+
+.right-container .friend-requests .request{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-padding);
+    margin-bottom: .7rem;
+}
+
+.right-container .friend-requests .request .info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .8rem;
+}
+
+.right-container .friend-requests .action{
+    display: flex;
+    gap: .8rem;
 }
